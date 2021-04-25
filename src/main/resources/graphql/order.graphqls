@@ -1,0 +1,9 @@
+scalar UUID
+
+type Mutation {
+    createOrder(name: String): UUID
+}
+
+type Query {
+
+}
