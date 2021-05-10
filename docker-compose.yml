@@ -8,6 +8,7 @@ services:
       - "8024:8024"
       - "8124:8124"
       - "8224:8224"
+
   jaeger:
     image: jaegertracing/all-in-one:1.7
     container_name: jaegertracing
@@ -15,3 +16,14 @@ services:
       - "16686:16686"
       - "6831:6831/udp"
       - "6832:6832/udp"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    hostname: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest

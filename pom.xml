@@ -18,6 +18,7 @@
         <axon.version>4.5</axon.version>
         <graphql.version>11.0.0</graphql.version>
         <spring.boot.version>2.4.2</spring.boot.version>
+        <axon.amqp.version>4.5</axon.amqp.version>
     </properties>
     <dependencies>
 
@@ -27,9 +28,20 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.axonframework</groupId>
             <artifactId>axon-spring-boot-starter</artifactId>
             <version>${axon.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.axonframework.extensions.amqp</groupId>
+            <artifactId>axon-amqp-spring-boot-starter</artifactId>
+            <version>${axon.amqp.version}</version>
         </dependency>
 
         <dependency>
@@ -43,6 +55,13 @@
             <artifactId>opentracing-spring-jaeger-web-starter</artifactId>
             <version>1.0.1</version>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>io.opentracing.contrib</groupId>-->
+<!--            <artifactId>opentracing-spring-rabbitmq-starter</artifactId>-->
+<!--            <version>3.0.2-SNAPSHOT</version>-->
+<!--        </dependency>-->
+
 
         <dependency>
             <groupId>org.projectlombok</groupId>
