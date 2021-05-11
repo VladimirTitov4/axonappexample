@@ -44,6 +44,7 @@
             <version>${axon.amqp.version}</version>
         </dependency>
 
+        <!-- Tracing-->
         <dependency>
             <groupId>org.axonframework.extensions.tracing</groupId>
             <artifactId>axon-tracing-spring-boot-starter</artifactId>
@@ -56,12 +57,12 @@
             <version>1.0.1</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>io.opentracing.contrib</groupId>-->
-<!--            <artifactId>opentracing-spring-rabbitmq-starter</artifactId>-->
-<!--            <version>3.0.2-SNAPSHOT</version>-->
-<!--        </dependency>-->
-
+        <dependency>
+            <groupId>io.opentracing.contrib</groupId>
+            <artifactId>opentracing-spring-rabbitmq-starter</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+        <!-- / Tracing-->
 
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -74,7 +75,6 @@
             <artifactId>graphql-java-extended-validation</artifactId>
             <version>16.0.0</version>
         </dependency>
-
 
         <dependency>
             <groupId>com.graphql-java-kickstart</groupId>
