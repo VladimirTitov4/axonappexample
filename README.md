@@ -2,7 +2,7 @@ Simple Axon Framework application
 
 1. docker-compose up
 2. Run the application
-3. go to localhost:8080/altair and send createOrder mutation
+3. go to localhost:8080/altair and send createOrder mutation 
 mutation{
   createOrder(name: "serf")
 }
