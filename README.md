@@ -11,4 +11,6 @@ mutation{
   #2 order has been payed
   #3 order has been delivered
 5. Traces could be seen in http://localhost:16686/search
-choose axon_app_example service and click "find traces" 
+choose axon_app_example service and click "find traces"
+under [Post] trace you will see sequence of commands & events
+6. to see what's wrong with axon amqp, uncomment in pom.xml the axon amqp dependency and rerun the application and run createOrder mutation again, you will see that sequence of events has been lost 
