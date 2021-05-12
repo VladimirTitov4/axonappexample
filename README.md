@@ -13,4 +13,5 @@ mutation{
 5. Traces could be seen in http://localhost:16686/search
 choose axon_app_example service and click "find traces"
 under [Post] trace you will see sequence of commands & events
-6. to see what's wrong with axon amqp, uncomment in pom.xml the axon amqp dependency and rerun the application and run createOrder mutation again, you will see that sequence of events has been lost 
+6. To see what's wrong with axon amqp, uncomment in pom.xml the axon amqp dependency and rerun the application and run createOrder mutation again, you will see that grouping of commands&events has been lost, and previously all commands, hanling commands, handling events has been visible, but after adding axon amqp dependency I handle only 3 Events and handle them separetely![2021-05-11_19-15](https://user-images.githubusercontent.com/48067168/117940481-c8d2b480-b311-11eb-8880-75ad27a10304.png)
+![2021-05-11_19-15_1](https://user-images.githubusercontent.com/48067168/117940499-cc663b80-b311-11eb-8e38-23d4ee741e96.png)
