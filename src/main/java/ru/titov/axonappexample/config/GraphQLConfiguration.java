@@ -1,18 +1,15 @@
 package ru.titov.axonappexample.config;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import graphql.GraphQLError;
-import graphql.kickstart.servlet.GraphQLHttpServlet;
-import graphql.kickstart.tools.SchemaParser;
-import graphql.kickstart.tools.SchemaParserOptions;
 import graphql.language.StringValue;
-import graphql.schema.*;
+import graphql.schema.Coercing;
+import graphql.schema.CoercingParseLiteralException;
+import graphql.schema.CoercingParseValueException;
+import graphql.schema.GraphQLScalarType;
 import graphql.validation.interpolation.MessageInterpolator;
 import graphql.validation.rules.ValidationEnvironment;
 import graphql.validation.rules.ValidationRules;
 import graphql.validation.schemawiring.ValidationSchemaWiring;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import ru.titov.axonappexample.exception.GraphQLValidationException;

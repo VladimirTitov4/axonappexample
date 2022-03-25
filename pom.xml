@@ -38,11 +38,11 @@
             <version>${axon.version}</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.axonframework.extensions.amqp</groupId>-->
-<!--            <artifactId>axon-amqp-spring-boot-starter</artifactId>-->
-<!--            <version>${axon.amqp.version}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.axonframework.extensions.amqp</groupId>
+            <artifactId>axon-amqp-spring-boot-starter</artifactId>
+            <version>${axon.amqp.version}</version>
+        </dependency>
 
         <!-- Tracing-->
         <dependency>
