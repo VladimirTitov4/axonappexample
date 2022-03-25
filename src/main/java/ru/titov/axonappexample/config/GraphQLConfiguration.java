@@ -53,25 +53,6 @@ public class GraphQLConfiguration {
         };
     }
 
-//    @Bean
-//    public ServletRegistrationBean<GraphQLHttpServlet> internalGraphQLServlet(
-//            @Value("${graphql.internal.servlet.mapping:/internal/graphql}") String urlServletMapping,
-//                                                                              ObjectMapper objectMapper) {
-//        GraphQLSchema schema = SchemaParser.newParser()
-//                .options(SchemaParserOptions.newOptions()
-//                        .objectMapperProvider(fieldDefinition -> objectMapper)
-//                        .build())
-//                .scalars(uuidScalar())
-//                .build().makeExecutableSchema();
-//
-//        GraphQLHttpServlet graphQLHttpServlet = GraphQLHttpServlet.with(schema);
-//
-//        ServletRegistrationBean<GraphQLHttpServlet> registration = new ServletRegistrationBean<>(
-//                graphQLHttpServlet, urlServletMapping);
-//        registration.setName("Internal ERP Endpoint");
-//        return registration;
-//    }
-
     @Bean
     public GraphQLScalarType uuidScalar() {
         return GraphQLScalarType.newScalar().name("UUID").coercing(new Coercing<UUID, String>() {

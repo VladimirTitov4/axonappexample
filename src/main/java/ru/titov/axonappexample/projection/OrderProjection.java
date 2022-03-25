@@ -23,16 +23,13 @@ public class OrderProjection {
 
     @EventHandler
     public void on(OrderCreatedEvent event) {
-
-//        DefaultUnitOfWork.startAndGet()
         log.info("#1 order has been created");
 //        commandGateway.send(new PayOrderCommand(event.getId(), event.getName()));
     }
 
     @EventHandler
     public void on(OrderPayedEvent event) {
-        throw new RuntimeException();
-//        log.info("#2 order has been payed");
+        log.info("#2 order has been payed");
 //        commandGateway.send(new DeliverOrderCommand(event.getId(), event.getName()));
     }
 

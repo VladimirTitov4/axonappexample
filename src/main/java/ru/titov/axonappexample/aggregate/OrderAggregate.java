@@ -25,9 +25,6 @@ public class OrderAggregate {
     @CommandHandler
     public OrderAggregate(CreateOrderCommand command, CommandGateway commandGateway) {
         commandGateway.send(new PayOrderCommand(UUID.randomUUID(), command.getName()));
-        if (1 == 1) {
-            throw new RuntimeException();
-        }
         AggregateLifecycle.apply(new OrderCreatedEvent(
                 command.getId(),
                 command.getName()
@@ -39,32 +36,4 @@ public class OrderAggregate {
         this.id = event.getId();
         this.name = event.getName();
     }
-
-    /*@CommandHandler
-    public void handle(PayOrderCommand command) {
-        AggregateLifecycle.apply(new OrderPayedEvent(
-                command.getId(),
-                command.getName()
-        ));
-    }
-
-    @EventSourcingHandler
-    public void on(OrderPayedEvent event) {
-        this.id = event.getId();
-        this.name = event.getName();
-    }
-
-    @CommandHandler
-    public void handle(DeliverOrderCommand command) {
-        AggregateLifecycle.apply(new OrderDeliveredEvent(
-                command.getId(),
-                command.getName()
-        ));
-    }
-
-    @EventSourcingHandler
-    public void on(OrderDeliveredEvent event) {
-        this.id = event.getId();
-        this.name = event.getName();
-    }*/
 }
